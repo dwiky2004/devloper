@@ -35,9 +35,9 @@ export default function Contact() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -56,9 +56,9 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
+
           {/* Contact Information */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -71,8 +71,8 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="text-xl font-bold font-poppins text-slate-800 dark:text-slate-100 mb-2">Email</h4>
-                <p className="text-slate-600 dark:text-slate-400">hello@johndoe.com</p>
-                <a href="mailto:hello@johndoe.com" className="text-sm font-medium text-accent-cyan hover:underline mt-2 inline-block">Send a message</a>
+                <p className="text-slate-600 dark:text-slate-400">laludwiky3@gmail.com</p>
+                <a href="mailto:laludwiky3@gmail.com" className="text-sm font-medium text-accent-cyan hover:underline mt-2 inline-block">Send a message</a>
               </div>
             </div>
 
@@ -81,9 +81,20 @@ export default function Contact() {
                 <Phone className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-xl font-bold font-poppins text-slate-800 dark:text-slate-100 mb-2">Phone</h4>
-                <p className="text-slate-600 dark:text-slate-400">+1 (555) 123-4567</p>
-                <a href="tel:+15551234567" className="text-sm font-medium text-accent-purple hover:underline mt-2 inline-block">Call me</a>
+                <h4 className="text-xl font-bold font-poppins text-slate-800 dark:text-slate-100 mb-2">WhatsApp</h4>
+                <p className="text-slate-600 dark:text-slate-400">+62 82341293554</p>
+                <a href="https://wa.me/6282341293554" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-accent-purple hover:underline mt-2 inline-block">Chat on WhatsApp</a>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-start gap-6 hover:shadow-md transition-shadow">
+              <div className="p-4 bg-sky-50 dark:bg-slate-700 rounded-full text-sky-500">
+                <Send className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-xl font-bold font-poppins text-slate-800 dark:text-slate-100 mb-2">Telegram</h4>
+                <p className="text-slate-600 dark:text-slate-400">@Kyxenfx</p>
+                <a href="https://t.me/Kyxenfx" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-sky-500 hover:underline mt-2 inline-block">Chat on Telegram</a>
               </div>
             </div>
 
@@ -93,26 +104,26 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="text-xl font-bold font-poppins text-slate-800 dark:text-slate-100 mb-2">Location</h4>
-                <p className="text-slate-600 dark:text-slate-400">San Francisco, CA<br/>Available for remote work</p>
+                <p className="text-slate-600 dark:text-slate-400">lombok timur,NTB<br />Available for remote work</p>
               </div>
             </div>
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 space-y-6 relative overflow-hidden">
-              
+
               <div className="space-y-2">
                 <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Full Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -123,10 +134,10 @@ export default function Contact() {
 
               <div className="space-y-2">
                 <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Email Address</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -137,9 +148,9 @@ export default function Contact() {
 
               <div className="space-y-2">
                 <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Your Message</label>
-                <textarea 
-                  id="message" 
-                  name="message" 
+                <textarea
+                  id="message"
+                  name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -149,12 +160,11 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 rounded-lg font-bold text-white shadow-lg flex items-center justify-center gap-2 transition-all duration-300 ${
-                  isSubmitting ? 'bg-slate-400 cursor-not-allowed' : 'bg-primary-blue hover:bg-blue-700 hover:shadow-blue-500/30 hover:-translate-y-1'
-                }`}
+                className={`w-full py-4 rounded-lg font-bold text-white shadow-lg flex items-center justify-center gap-2 transition-all duration-300 ${isSubmitting ? 'bg-slate-400 cursor-not-allowed' : 'bg-primary-blue hover:bg-blue-700 hover:shadow-blue-500/30 hover:-translate-y-1'
+                  }`}
               >
                 {isSubmitting ? (
                   <span className="flex items-center gap-2">
@@ -173,7 +183,7 @@ export default function Contact() {
 
               {/* Success Message */}
               {submitStatus === 'success' && (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="absolute inset-0 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm flex items-center justify-center rounded-2xl"

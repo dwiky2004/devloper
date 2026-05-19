@@ -5,37 +5,37 @@ import { Github, ExternalLink } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and Stripe integration for seamless payments.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Linktree Jualan',
+      description: 'Custom linktree for business and commerce.',
+      image: '/poto1.png',
+      techStack: ['HTML', 'CSS'],
+      liveUrl: 'https://github.com/dwiky2004/linktree',
+      githubUrl: 'https://github.com/dwiky2004/linktree',
     },
     {
-      title: 'Task Management App',
-      description: 'A responsive task manager with drag-and-drop functionality, real-time updates, and team collaboration.',
-      image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=800&q=80',
-      techStack: ['Vue.js', 'Firebase', 'Tailwind CSS', 'Vuex'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Kompresi Fix',
+      description: 'A data compression utility or application developed using Dart.',
+      image: '/poto2.jpeg',
+      techStack: ['Dart', 'Flutter'],
+      liveUrl: 'https://github.com/dwiky2004/kompresi_fix',
+      githubUrl: 'https://github.com/dwiky2004/kompresi_fix',
     },
     {
-      title: 'Portfolio Website',
-      description: 'A modern, high-performance portfolio website built with Next.js, Framer Motion, and Tailwind CSS.',
-      image: 'https://images.unsplash.com/photo-1507238692062-74eec32eb1b5?auto=format&fit=crop&w=800&q=80',
-      techStack: ['Next.js', 'Framer Motion', 'Tailwind'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Citra Digital',
+      description: 'Digital image processing application built with Dart.',
+      image: '/poto3.png',
+      techStack: ['Dart', 'Flutter'],
+      liveUrl: 'https://github.com/dwiky2004/citra-digital',
+      githubUrl: 'https://github.com/dwiky2004/citra-digital',
     },
   ];
 
   return (
     <section id="projects" className="py-24 bg-slate-50 dark:bg-slate-900/50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -72,27 +72,27 @@ export default function Projects() {
                 className="h-full"
               >
                 <div className="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 h-full flex flex-col">
-                  
+
                   {/* Image Container */}
                   <div className="relative h-56 overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
+                    <img
+                      src={project.image}
+                      alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                      <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="p-3 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full text-white transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-100"
                       >
                         <Github className="w-5 h-5" />
                       </a>
-                      <a 
-                        href={project.liveUrl} 
-                        target="_blank" 
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="p-3 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full text-white transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-150"
                       >
@@ -109,11 +109,11 @@ export default function Projects() {
                     <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow leading-relaxed">
                       {project.description}
                     </p>
-                    
+
                     {/* Tech Stack Tags */}
                     <div className="flex flex-wrap gap-2 mt-auto">
                       {project.techStack.map((tech, techIndex) => (
-                        <span 
+                        <span
                           key={techIndex}
                           className="px-3 py-1 text-xs font-medium text-slate-600 bg-slate-100 dark:text-slate-300 dark:bg-slate-700/50 rounded-full"
                         >
@@ -122,7 +122,7 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
-                  
+
                 </div>
               </Tilt>
             </motion.div>

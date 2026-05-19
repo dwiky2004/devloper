@@ -43,11 +43,11 @@ export default function Navbar() {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 dark:bg-primary-dark/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          
+
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <a href="#" className="text-2xl font-bold font-poppins bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan to-accent-purple">
-              JD.
+              LD.
             </a>
           </div>
 
@@ -63,7 +63,7 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            
+
             <button
               onClick={() => setIsDark(!isDark)}
               className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
@@ -71,7 +71,7 @@ export default function Navbar() {
             >
               {isDark ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-slate-700" />}
             </button>
-            
+
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, '#contact')}
@@ -89,7 +89,7 @@ export default function Navbar() {
             >
               {isDark ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-slate-700" />}
             </button>
-            
+
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-slate-600 dark:text-slate-300 hover:text-accent-cyan transition-colors"
@@ -102,7 +102,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Panel */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-white dark:bg-primary-dark border-t dark:border-slate-800 shadow-xl"
