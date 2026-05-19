@@ -104,7 +104,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="text-xl font-bold font-poppins text-slate-800 dark:text-slate-100 mb-2">Location</h4>
-                <p className="text-slate-600 dark:text-slate-400">lombok timur,NTB<br />Available for remote work</p>
+                <p className="text-slate-600 dark:text-slate-400">Indonesia,lombok timur,NTB<br />Available for remote work</p>
               </div>
             </div>
           </motion.div>
