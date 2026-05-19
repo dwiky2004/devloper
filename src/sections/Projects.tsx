@@ -7,7 +7,7 @@ export default function Projects() {
     {
       title: 'Linktree Jualan',
       description: 'Custom linktree for business and commerce.',
-      image: '/poto1.png',
+      image: './poto1.png',
       techStack: ['HTML', 'CSS'],
       liveUrl: 'https://github.com/dwiky2004/linktree',
       githubUrl: 'https://github.com/dwiky2004/linktree',
@@ -15,7 +15,7 @@ export default function Projects() {
     {
       title: 'Kompresi Fix',
       description: 'A data compression utility or application developed using Dart.',
-      image: '/poto2.jpeg',
+      image: './poto2.jpeg',
       techStack: ['Dart', 'Flutter'],
       liveUrl: 'https://github.com/dwiky2004/kompresi_fix',
       githubUrl: 'https://github.com/dwiky2004/kompresi_fix',
@@ -23,7 +23,7 @@ export default function Projects() {
     {
       title: 'Citra Digital',
       description: 'Digital image processing application built with Dart.',
-      image: '/poto3.png',
+      image: './poto3.png',
       techStack: ['Dart', 'Flutter'],
       liveUrl: 'https://github.com/dwiky2004/citra-digital',
       githubUrl: 'https://github.com/dwiky2004/citra-digital',

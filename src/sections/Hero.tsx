@@ -14,7 +14,7 @@ export default function Hero() {
           className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
         >
           {/* Video Background Utama */}
-          <source src="/mentahan.mp4" type="video/mp4" />
+          <source src="./mentahan.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -92,7 +92,7 @@ export default function Hero() {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="/profil-bg-video.mp4" type="video/mp4" />
+                <source src="./profil-bg-video.mp4" type="video/mp4" />
               </video>
               {/* Fallback gradient if video is not present */}
               <div className="absolute inset-0 bg-gradient-to-tr from-accent-cyan to-accent-purple -z-10"></div>
@@ -108,7 +108,7 @@ export default function Hero() {
                 playsInline
                 className="w-full h-full object-cover relative z-10"
               >
-                <source src="/profil.mp4" type="video/mp4" />
+                <source src="./profil.mp4" type="video/mp4" />
               </video>
 
               {/* Fallback avatar if video fails or is missing */}
